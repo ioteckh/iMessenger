@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
@@ -19,6 +20,9 @@ class RegisterViewController: UIViewController {
         let logoImage = UIImageView()
         logoImage.contentMode = .scaleAspectFit
         logoImage.image = UIImage(systemName: "person.circle")
+        logoImage.layer.masksToBounds = true
+        logoImage.layer.borderWidth = 2
+        logoImage.layer.borderColor = UIColor.lightGray.cgColor
         return logoImage
     }()
     
@@ -127,6 +131,8 @@ class RegisterViewController: UIViewController {
                                  width: size,
                                  height: size)
         
+        logoImage.layer.cornerRadius = logoImage.width / 2.0
+        
         firstNameField.frame = CGRect(x: 30,
                                   y: logoImage.bottom + 20,
                                   width: scrollView.width - 60,
@@ -167,11 +173,31 @@ class RegisterViewController: UIViewController {
             return
         }
         //Firebase Login
+        
+        DatabaseManager.shared.userExits(with: email, completion: { [weak self]exists in
+            guard let strongSelf = self else{
+                return
+            }
+            guard !exists else{
+                //User alredy exists
+                strongSelf.alertUserLoginError(message: "An account is registered with that email address")
+                return
+            }
+            Auth.auth().createUser(withEmail: email, password: password, completion: {authResult, error in
+                guard authResult != nil, error == nil else{
+                    print("Could not register")
+                    return
+                }
+                
+                DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
+                strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+            })
+        })
     }
     
-    @objc private func alertUserLoginError() {
+    @objc private func alertUserLoginError(message: String = "Please Fill In All Fields To Register  ") {
         let alert = UIAlertController(title: "Woops",
-                                      message: "Please Fill In All Fields To Register  ",
+                                      message: message,
                                       preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil ))
@@ -199,6 +225,8 @@ extension RegisterViewController: UITextFieldDelegate{
 extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func presentPhotoActionSheet(){
+        
+
         let actionSheet = UIAlertController(title: "Profile Picture",
                                             message: "Select a method for choosing a profile picture",
                                             preferredStyle: .actionSheet)
@@ -227,19 +255,26 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         vc.sourceType = .camera
         vc.delegate = self
         vc.allowsEditing = true
+        present(vc, animated: true)
     }
     
     func presentPhotoPicker(){
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
         vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated:  true)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        return
+        guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else{
+            return
+        }
+        self.logoImage.image = selectedImage
+        picker.dismiss(animated: true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        return
+        picker.dismiss(animated: true, completion: nil)
     }
 }

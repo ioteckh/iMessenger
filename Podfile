@@ -19,5 +19,6 @@ target 'iMessenger' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase'
+  pod 'Firebase/Database'
 
 end
