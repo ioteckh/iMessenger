@@ -17,6 +17,7 @@
 		6629BEAF2563DCA400AD5B46 /* iMessengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6629BEAE2563DCA400AD5B46 /* iMessengerTests.swift */; };
 		6629BEBA2563DCA400AD5B46 /* iMessengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6629BEB92563DCA400AD5B46 /* iMessengerUITests.swift */; };
 		6629BECB2563DDC900AD5B46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6629BECA2563DDC900AD5B46 /* GoogleService-Info.plist */; };
+		66A6CD922567F44000EA8619 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6CD912567F44000EA8619 /* ChatViewController.swift */; };
 		66C9B14725662B05008CB26F /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C9B14625662B05008CB26F /* DatabaseManager.swift */; };
 		66F8A62E2563E22900217C1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8A62D2563E22900217C1A /* LoginViewController.swift */; };
 		66F8A6332563E23800217C1A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8A6322563E23800217C1A /* RegisterViewController.swift */; };
@@ -66,6 +67,7 @@
 		6629BEB92563DCA400AD5B46 /* iMessengerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessengerUITests.swift; sourceTree = "<group>"; };
 		6629BEBB2563DCA400AD5B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6629BECA2563DDC900AD5B46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		66A6CD912567F44000EA8619 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		66C9B14625662B05008CB26F /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		66F8A62D2563E22900217C1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		66F8A6322563E23800217C1A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				66F8A63C2563E25800217C1A /* VideoPlayerViewController.swift */,
 				66F8A6412563E27400217C1A /* NewConversationViewController.swift */,
 				66F8A6462563E28300217C1A /* ProfileViewController.swift */,
+				66A6CD912567F44000EA8619 /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				6629BE982563DCA100AD5B46 /* AppDelegate.swift in Sources */,
 				66F8A6472563E28300217C1A /* ProfileViewController.swift in Sources */,
 				6629BE9A2563DCA100AD5B46 /* SceneDelegate.swift in Sources */,
+				66A6CD922567F44000EA8619 /* ChatViewController.swift in Sources */,
 				66F8A6382563E24A00217C1A /* PhotoViewerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
