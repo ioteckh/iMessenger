@@ -19,6 +19,12 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb203110477932839</string>
+			</array>
+		</dict>
+		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
@@ -26,15 +32,13 @@
 				<string>com.googleusercontent.apps.448872413796-8k75ljks1h9sr03arj7bmmljdh876ndv</string>
 			</array>
 		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array/>
-		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>203110477932839</string>
+	<key>FacebookDisplayName</key>
+	<string>iMessenger</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
@@ -81,19 +85,5 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
-    
-    <key>FacebookAppID</key>
-        <string>203110477932839</string>
-        <key>FacebookDisplayName</key>
-        <string>iMessenger</string>
-        <key>CFBundleURLTypes</key>
-        <array>
-          <dict>
-          <key>CFBundleURLSchemes</key>
-          <array>
-            <string>fb203110477932839</string>
-          </array>
-          </dict>
-        </array>
 </dict>
 </plist>
