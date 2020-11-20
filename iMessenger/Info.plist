@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Please allow access to  photo library</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Please allow access to camera</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -30,11 +26,21 @@
 				<string>com.googleusercontent.apps.448872413796-8k75ljks1h9sr03arj7bmmljdh876ndv</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array/>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Please allow access to camera</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Please allow access to  photo library</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -75,5 +81,19 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+    
+    <key>FacebookAppID</key>
+        <string>203110477932839</string>
+        <key>FacebookDisplayName</key>
+        <string>iMessenger</string>
+        <key>CFBundleURLTypes</key>
+        <array>
+          <dict>
+          <key>CFBundleURLSchemes</key>
+          <array>
+            <string>fb203110477932839</string>
+          </array>
+          </dict>
+        </array>
 </dict>
 </plist>
