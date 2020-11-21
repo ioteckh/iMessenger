@@ -20,6 +20,7 @@ target 'iMessenger' do
   pod 'Firebase/Auth'
   pod 'Firebase'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 
 	# Pod For FaceBook
     pod 'FBSDKLoginKit'

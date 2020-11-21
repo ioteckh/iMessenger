@@ -18,6 +18,7 @@
 		6629BEBA2563DCA400AD5B46 /* iMessengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6629BEB92563DCA400AD5B46 /* iMessengerUITests.swift */; };
 		6629BECB2563DDC900AD5B46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6629BECA2563DDC900AD5B46 /* GoogleService-Info.plist */; };
 		66A6CD922567F44000EA8619 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6CD912567F44000EA8619 /* ChatViewController.swift */; };
+		66A6CDB72569839300EA8619 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6CDB62569839300EA8619 /* StorageManager.swift */; };
 		66C9B14725662B05008CB26F /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C9B14625662B05008CB26F /* DatabaseManager.swift */; };
 		66F8A62E2563E22900217C1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8A62D2563E22900217C1A /* LoginViewController.swift */; };
 		66F8A6332563E23800217C1A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8A6322563E23800217C1A /* RegisterViewController.swift */; };
@@ -68,6 +69,7 @@
 		6629BEBB2563DCA400AD5B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6629BECA2563DDC900AD5B46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		66A6CD912567F44000EA8619 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		66A6CDB62569839300EA8619 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		66C9B14625662B05008CB26F /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		66F8A62D2563E22900217C1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		66F8A6322563E23800217C1A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				6629BE992563DCA100AD5B46 /* SceneDelegate.swift */,
 				66F8A65A2563EA7000217C1A /* Extensions.swift */,
 				66C9B14625662B05008CB26F /* DatabaseManager.swift */,
+				66A6CDB62569839300EA8619 /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				6629BE9A2563DCA100AD5B46 /* SceneDelegate.swift in Sources */,
 				66A6CD922567F44000EA8619 /* ChatViewController.swift in Sources */,
 				66F8A6382563E24A00217C1A /* PhotoViewerViewController.swift in Sources */,
+				66A6CDB72569839300EA8619 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
