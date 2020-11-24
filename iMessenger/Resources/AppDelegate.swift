@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
               let lastName = user.profile.familyName else{
             return
         }
-        
+        UserDefaults.standard.setValue(email, forKey: "email")
         DatabaseManager.shared.userExits(with: email, completion: { exists in
             if !exists{
                //Insert

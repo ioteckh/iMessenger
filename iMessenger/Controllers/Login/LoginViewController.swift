@@ -195,9 +195,11 @@ class LoginViewController: UIViewController{
             }
              
             guard authResult != nil , error == nil else{
-                strongSelf.alertUserLoginError(message: "The Email or Password Entered Is Incorrect")
                 return
             }
+            
+            UserDefaults.standard.setValue(email, forKey: "email")
+            
             strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         })
     }
@@ -255,6 +257,7 @@ extension LoginViewController: LoginButtonDelegate{
                 return
             }
             
+            UserDefaults.standard.setValue(email, forKey: "email")
             
             DatabaseManager.shared.userExits(with: email, completion: {exists in
                 if !exists{
